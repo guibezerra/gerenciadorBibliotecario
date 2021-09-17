@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Emprestimo</title>
+</h:head>
+<h:body>
+	<h1>Processo de Emprestimo</h1>
+	<h:form>
+		<h:panelGrid columns="2">
+			<p:outputLabel value="Data do Emprestimo: " />
+			<p:inputText value="#{usuarioMB.item.data_emprestimo}" />
+
+			<p:outputLabel value="Data Final do Emprestimo: " />
+			<p:inputText value="#{usuarioMB.item.data_final}" />
+
+			<p:outputLabel value="Data de Entrega: " />
+			<p:inputText value="#{usuarioMB.item.data_entrega}" />
+
+			<p:outputLabel value="Titulo: " />
+			<p:inputText  />
+
+			<p:outputLabel value="Ano: " />
+			<p:inputText  />
+
+			<p:outputLabel value="Valor Patrimonial: " />
+			<p:inputText  />
+
+			<p:outputLabel value="Editora: " />
+			<p:inputText  />
+
+			<p:outputLabel value="Volume do Exemplar: " />
+			<p:inputText  />
+
+			<p:outputLabel value="Numero do Exemplar: " />
+			<p:inputText  />
+
+			<p:selectOneRadio  unselectable="true">
+				<f:selectItem itemLabel="Livro" itemValue="1" />
+				<f:selectItem itemLabel="Revista" itemValue="0" />
+			</p:selectOneRadio>
+		</h:panelGrid>
+
+		<br />
+
+		<p:commandButton value="Realizar Emprestimo"
+			action="#{usuarioMB.emprestimo}" />
+
+	</h:form>
+</h:body>
+</html>
